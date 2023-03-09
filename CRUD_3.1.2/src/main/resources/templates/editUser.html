@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>User Editor</title>
+</head>
+<body>
+<h1>User Editor</h1>
+<form action="#" th:action="@{/editUser}"  th:object="${user}"  method="post" >
+  <div style="display: none">
+    <input type="text" id="id" name="id" th:value="${user.id}">
+  </div>
+  <div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="name" th:value="${user.name}">
+  </div>
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" th:value="${user.lastName}">
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="eMail" th:value="${user.eMail}">
+  </div>
+  <div>
+    <input type="submit" value="Save">
+  </div>
+</form>
+</body>
+</html>
